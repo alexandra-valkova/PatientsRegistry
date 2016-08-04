@@ -1,0 +1,139 @@
+﻿@model PatientsRegistry.ViewModels.AppointmentsListVM
+
+@{
+    ViewBag.Title = "Appointments";
+}
+
+<h2>Appointments</h2>
+
+<p>
+    @Html.ActionLink("Request New", "Request")
+</p>
+
+<hr />
+
+<div class="alert alert-warning" role="alert">
+    <strong>Pending</strong>
+</div>
+<table class="table table-hover">
+    <tr>
+        <th>
+            Doctor
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Appointment item in Model.Appointments)
+    {
+        if (item.Status == StatusEnum.Unknown)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Reschedule", "Reschedule", new { id = item.ID }) |*@
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<hr />
+<div class="alert alert-success" role="alert">
+    <strong>Approved</strong>
+</div>
+<table class="table table-hover">
+    <tr>
+        <th>
+            Doctor
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Appointment item in Model.Appointments)
+    {
+        if (item.Status == StatusEnum.Approved)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Reschedule", "Reschedule", new { id = item.ID }) |*@
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<hr />
+
+<div class="alert alert-danger" role="alert">
+    <strong>Unapproved</strong>
+</div>
+<table class="table table-hover">
+    <tr>
+        <th>
+            Doctor
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Appointment item in Model.Appointments)
+    {
+        if (item.Status == StatusEnum.Unapproved)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Reschedule", "Reschedule", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    }
+</table>

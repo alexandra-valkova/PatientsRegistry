@@ -1,0 +1,20 @@
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\DataAccess\obj\Debug\DataAccess.pdb

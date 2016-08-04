@@ -1,0 +1,132 @@
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.csprojResolveAssemblyReference.cache
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\ApplicationInsights.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.exe
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.exe.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.rsp
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\csi.exe
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\csi.rsp
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.AppContext.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.exe
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.exe.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.rsp
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.dll.config
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.pdb
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\DataAccess.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\EntityFramework.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\EntityFramework.SqlServer.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Web.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Helpers.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Mvc.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Razor.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Razor.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\DataAccess.pdb
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\EntityFramework.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\EntityFramework.SqlServer.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Web.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Razor.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Razor.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Helpers.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\bin\System.Web.Mvc.xml
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.dll
+C:\Users\Alexandra\Downloads\Phonebook\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.pdb
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\ApplicationInsights.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.exe
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.exe.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\csc.rsp
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\csi.exe
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\csi.rsp
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.AppContext.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.exe
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.exe.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\vbc.rsp
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.dll.config
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\PatientsRegistry.pdb
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\DataAccess.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\EntityFramework.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\EntityFramework.SqlServer.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Web.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Helpers.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Mvc.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Razor.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Razor.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\DataAccess.pdb
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\EntityFramework.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\EntityFramework.SqlServer.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.Web.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Razor.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Webpages.Razor.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Helpers.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\bin\System.Web.Mvc.xml
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.csprojResolveAssemblyReference.cache
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.dll
+C:\Users\Alexandra\Documents\Visual Studio 2015\Projects\PatientsRegistry\PatientsRegistry\obj\Debug\PatientsRegistry.pdb

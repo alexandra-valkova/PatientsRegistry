@@ -1,0 +1,57 @@
+﻿@model PatientsRegistry.ViewModels.Patient.AppointmentReschedule
+
+@{
+    ViewBag.Title = "Reschedule";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css" />
+}
+
+@section scripts
+{
+    <script src="~/scripts/moment.min.js"></script>
+    <script src="~/scripts/moment-with-locales.min.js"></script>
+    <script src="~/scripts/bg.js"></script>
+    <script src="~/scripts/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(function () {
+            $('#datetimepicker').datetimepicker({
+                locale: 'bg'
+            });
+        });
+    </script>
+}
+
+<h2>Reschedule</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Appointment</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", id = "datetimepicker" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
