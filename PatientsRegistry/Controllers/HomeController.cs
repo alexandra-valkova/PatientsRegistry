@@ -28,7 +28,7 @@ namespace PatientsRegistry.Controllers
                 return View(model);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Logout()
@@ -38,7 +38,7 @@ namespace PatientsRegistry.Controllers
                 AuthenticationManager.Logout();
             }
 
-            return RedirectToAction("Login", "Home");
+            return RedirectToAction("Login");
         }
     }
 }
