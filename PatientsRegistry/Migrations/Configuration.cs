@@ -1,15 +1,17 @@
 namespace PatientsRegistry.Migrations
 {
+    using DataAccess;
+    using DataAccess.Entities;
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AppContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PatientsRegistryDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(AppContext context)
+        protected override void Seed(PatientsRegistryDB context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -23,6 +25,12 @@ namespace PatientsRegistry.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Users.AddOrUpdate(
+                  u => u.ID,
+                  new User { ID = 1, Username = "alexandra", Password = "password", FirstName = "Alexandra", LastName = "Valkova", IsDoctor = false },
+                  new User { ID = 2, Username = "yosifova", Password = "password", FirstName = "Diana", LastName = "Yosifova", IsDoctor = true }
+                );
         }
     }
 }

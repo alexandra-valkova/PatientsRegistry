@@ -1,20 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using DataAccess.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq.Expressions;
 using System.Linq;
-using DataAccess.Entities;
+using System.Linq.Expressions;
 
 namespace DataAccess.Repositories
 {
     public abstract class BaseRepository<T> where T : BaseEntity
     {
-        private PatientsRegistryDB<T> Context { get; set; }
+        private PatientsRegistryDB Context { get; set; }
         public DbSet<T> DbSet { get; set; }
 
         public BaseRepository()
         {
-            Context = new PatientsRegistryDB<T>();
+            Context = new PatientsRegistryDB();
             DbSet = Context.Set<T>();
         }
 
