@@ -75,7 +75,9 @@ namespace PatientsRegistry.Controllers
             AppointmentRepository appRepo = new AppointmentRepository();
 
             // check if appointment already exists
-            Appointment findApp = appRepo.GetFirst(a => (app.Date >= a.Date && app.Date <= DbFunctions.AddMinutes(a.Date, 30)) && app.DoctorID == a.DoctorID);
+            Appointment findApp = appRepo.GetFirst(a => app.Date >= a.Date &&
+                                                        app.Date <= DbFunctions.AddMinutes(a.Date, 30) &&
+                                                        app.DoctorID == a.DoctorID);
             if (findApp == null)
             {
                 appRepo.Save(app);
