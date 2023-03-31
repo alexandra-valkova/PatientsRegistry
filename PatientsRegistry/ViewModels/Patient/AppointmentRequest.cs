@@ -11,8 +11,9 @@ namespace PatientsRegistry.ViewModels.Patient
     public class AppointmentRequest : BaseVM
     {
         [Required]
-        [DataType(DataType.DateTime)]
         [MinDateToday]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-ddTHH:mm}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
 
         [Required]
