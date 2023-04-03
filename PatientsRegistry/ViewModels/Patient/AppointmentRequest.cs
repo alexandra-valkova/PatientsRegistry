@@ -29,7 +29,7 @@ namespace PatientsRegistry.ViewModels.Patient
                 List<SelectListItem> doctors = new List<SelectListItem>();
                 foreach (User doctor in doctorsAll)
                 {
-                    doctors.Add(new SelectListItem { Text = doctor.ToString(), Value = doctor.ID.ToString() });
+                    doctors.Add(new SelectListItem { Text = doctor.FullName, Value = doctor.ID.ToString() });
                 }
                 return doctors;
             }
