@@ -1,6 +1,6 @@
-﻿using System.Web;
-using DataAccess.Entities;
+﻿using DataAccess.Entities;
 using DataAccess.Services;
+using System.Web;
 
 namespace PatientsRegistry.Models
 {

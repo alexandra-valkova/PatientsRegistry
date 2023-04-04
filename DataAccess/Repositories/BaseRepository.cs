@@ -69,7 +69,7 @@ namespace DataAccess.Repositories
                 Insert(entity);
             }
         }
-         // Add
+        // Add
         private void Insert(T entity)
         {
             DbSet.Add(entity);
