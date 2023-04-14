@@ -6,6 +6,8 @@ namespace PatientsRegistry.Models
 {
     public static class AuthenticationManager
     {
+        public static bool IsLogged => LoggedUser != null;
+
         public static User LoggedUser
         {
             get

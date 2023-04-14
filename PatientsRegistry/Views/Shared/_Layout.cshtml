@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - Patients Registry</title>
 
     @Styles.Render("~/Content/css")
-
     @RenderSection("styles", required: false)
 </head>
 
@@ -19,7 +18,7 @@
             @Html.ActionLink("Patients Registry", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mr-auto">
-                    @if (PatientsRegistry.Models.AuthenticationManager.LoggedUser == null)
+                    @if (!PatientsRegistry.Models.AuthenticationManager.IsLogged)
                     {
                         <li class="nav-item">@Html.ActionLink("Login", "Login", "Home", null, new { @class = "nav-link" })</li>
                     }
@@ -51,7 +50,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
-
     @RenderSection("scripts", required: false)
 </body>
 </html>
