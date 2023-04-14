@@ -31,7 +31,7 @@
 
     @foreach (Appointment item in Model.Appointments)
     {
-        if (item.Status == StatusEnum.Unknown)
+        if (item.Status == StatusEnum.Pending)
         {
             <tr>
                 <td>

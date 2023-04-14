@@ -19,7 +19,7 @@ namespace DataAccess.Entities
 
     public enum StatusEnum
     {
-        Unknown,
+        Pending,
         Approved,
         Unapproved
     }

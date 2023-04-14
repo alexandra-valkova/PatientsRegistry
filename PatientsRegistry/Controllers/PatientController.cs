@@ -121,7 +121,7 @@ namespace PatientsRegistry.Controllers
             Appointment app = appRepo.GetByID(model.ID);
 
             app.Date = model.Date;
-            app.Status = StatusEnum.Unknown;
+            app.Status = StatusEnum.Pending;
             appRepo.Save(app);
 
             return RedirectToAction("Index");
