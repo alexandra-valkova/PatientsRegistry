@@ -36,7 +36,11 @@
 
     </dl>
 </div>
+
 <p>
-    @*@Html.ActionLink("Reshedule", "Reshedule", new { id = Model.ID }) |*@
-    @Html.ActionLink("Back to List", "Index")
+    @if (Model.Status == StatusEnum.Unapproved)
+    {
+        @Html.ActionLink("Reschedule", "Reschedule", new { id = Model.ID }, new { @class = "btn btn-warning" })
+    }
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
 </p>

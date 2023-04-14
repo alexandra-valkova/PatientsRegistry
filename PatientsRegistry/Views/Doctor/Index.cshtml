@@ -11,19 +11,21 @@
 <div class="alert alert-warning" role="alert">
     <strong>Pending</strong>
 </div>
-<table class="table table-hover">
-    <tr>
-        <th>
-            Patient
-        </th>
-        <th>
-            Date
-        </th>
-        <th>
-            Status
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-hover table-borderless">
+    <thead class="table-light">
+        <tr>
+            <th>
+                Patient
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 
     @foreach (Appointment item in Model.Appointments)
     {
@@ -40,9 +42,9 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
-                    @Html.ActionLink("Review", "Review", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Review", "Review", new { id = item.ID }, new { @class = "btn btn-outline-warning" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-outline-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger" })
                 </td>
             </tr>
         }
@@ -55,19 +57,21 @@
 <div class="alert alert-success" role="alert">
     <strong>Approved</strong>
 </div>
-<table class="table table-hover">
-    <tr>
-        <th>
-            Patient
-        </th>
-        <th>
-            Date
-        </th>
-        <th>
-            Status
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-hover table-borderless">
+    <thead class="table-light">
+        <tr>
+            <th>
+                Patient
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 
     @foreach (Appointment item in Model.Appointments)
     {
@@ -84,9 +88,9 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
-                    @Html.ActionLink("Review", "Review", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Review", "Review", new { id = item.ID }, new { @class = "btn btn-outline-warning" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-outline-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger" })
                 </td>
             </tr>
         }
@@ -99,19 +103,21 @@
 <div class="alert alert-danger" role="alert">
     <strong>Unapproved</strong>
 </div>
-<table class="table table-hover">
-    <tr>
-        <th>
-            Patient
-        </th>
-        <th>
-            Date
-        </th>
-        <th>
-            Status
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-hover table-borderless">
+    <thead class="table-light">
+        <tr>
+            <th>
+                Patient
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 
     @foreach (Appointment item in Model.Appointments)
     {
@@ -128,12 +134,11 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
-                    @Html.ActionLink("Review", "Review", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Review", "Review", new { id = item.ID }, new { @class = "btn btn-outline-warning" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-outline-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger" })
                 </td>
             </tr>
         }
     }
-
 </table>
