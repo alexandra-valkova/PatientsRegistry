@@ -1,6 +1,6 @@
-﻿using PatientsRegistry.Models;
+﻿using System.Web.Mvc;
+using PatientsRegistry.Models;
 using PatientsRegistry.ViewModels.Home;
-using System.Web.Mvc;
 
 namespace PatientsRegistry.Controllers
 {
@@ -18,7 +18,7 @@ namespace PatientsRegistry.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginVM model)
+        public ActionResult Login(LoginViewModel model)
         {
             AuthenticationManager.Login(model.Username, model.Password);
 

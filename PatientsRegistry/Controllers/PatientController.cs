@@ -1,70 +1,66 @@
-﻿using DataAccess.Entities;
+﻿using System;
+using System.Data.Entity;
+using System.Web.Mvc;
+using DataAccess.Entities;
 using DataAccess.Repositories;
 using PatientsRegistry.Filters;
 using PatientsRegistry.Models;
 using PatientsRegistry.ViewModels;
 using PatientsRegistry.ViewModels.Patient;
-using System;
-using System.Data.Entity;
-using System.Web.Mvc;
 
 namespace PatientsRegistry.Controllers
 {
     [Patient]
     [Authenticate]
-    public class PatientController : BaseController<Appointment, AppointmentsListVM, AppointmentDetailsPatient>
+    public class PatientController : BaseController<Appointment, AppointmentsListViewModel, AppointmentDetailsPatientViewModel>
     {
-        // Repo
-        public override BaseRepository<Appointment> GetRepo()
+        public override BaseRepository<Appointment> GetRepository()
         {
             return new AppointmentRepository();
         }
 
-        // Index
-        public override AppointmentsListVM PopulateListVM(AppointmentsListVM model)
+        public override AppointmentsListViewModel PopulateListViewModel(AppointmentsListViewModel model)
         {
             TryUpdateModel(model);
 
-            BaseRepository<Appointment> appRepo = GetRepo();
-            model.Appointments = appRepo.GetAll(a => a.PatientID == AuthenticationManager.LoggedUser.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            model.Appointments = appointmentRepository.GetAll(appointment => appointment.PatientID == AuthenticationManager.LoggedUser.ID);
 
             return model;
         }
 
-        // Details
-        public override AppointmentDetailsPatient PopulateDetailsVM(AppointmentDetailsPatient model)
+        public override AppointmentDetailsPatientViewModel PopulateDetailsViewModel(AppointmentDetailsPatientViewModel model)
         {
-            BaseRepository<Appointment> appRepo = GetRepo();
-            Appointment app = appRepo.GetByID(model.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(model.ID);
 
-            model.Date = app.Date;
-            model.Status = app.Status;
-            model.Doctor = app.Doctor.FullName;
+            model.Date = appointment.Date;
+            model.Status = appointment.Status;
+            model.Doctor = appointment.Doctor.FullName;
 
             return model;
         }
 
-        // Request GET
         [HttpGet]
         public new ActionResult Request()
         {
-            AppointmentRequest model = new AppointmentRequest()
+            AppointmentRequestViewModel model = new AppointmentRequestViewModel()
             {
                 Date = DateTime.Now
             };
+
             return View(model);
         }
 
-        // Request POST
         [HttpPost]
-        public new ActionResult Request(AppointmentRequest model)
+        public new ActionResult Request(AppointmentRequestViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            Appointment app = new Appointment()
+            Appointment appointment = new Appointment()
             {
                 ID = model.ID,
                 Date = model.Date,
@@ -72,15 +68,16 @@ namespace PatientsRegistry.Controllers
                 PatientID = AuthenticationManager.LoggedUser.ID
             };
 
-            AppointmentRepository appRepo = new AppointmentRepository();
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
 
             // check if appointment already exists
-            Appointment findApp = appRepo.GetFirst(a => app.Date >= a.Date &&
-                                                        app.Date <= DbFunctions.AddMinutes(a.Date, 30) &&
-                                                        app.DoctorID == a.DoctorID);
-            if (findApp == null)
+            Appointment existingAppointment = appointmentRepository.GetFirst(a => appointment.Date >= a.Date
+                                                                                  && appointment.Date <= DbFunctions.AddMinutes(a.Date, 30)
+                                                                                  && appointment.DoctorID == a.DoctorID);
+
+            if (existingAppointment == null)
             {
-                appRepo.Save(app);
+                appointmentRepository.Save(appointment);
             }
 
             else
@@ -92,37 +89,35 @@ namespace PatientsRegistry.Controllers
             return RedirectToAction("Index");
         }
 
-        // Reschedule GET
         [HttpGet]
         public ActionResult Reschedule(int? id)
         {
-            AppointmentRepository appRepo = new AppointmentRepository();
-            Appointment app = appRepo.GetByID(id.Value);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(id.Value);
 
-            AppointmentReschedule model = new AppointmentReschedule()
+            AppointmentRescheduleViewModel model = new AppointmentRescheduleViewModel()
             {
-                Date = app.Date
+                Date = appointment.Date
             };
 
             return View(model);
         }
 
-        // Reschedule POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Reschedule(AppointmentReschedule model)
+        public ActionResult Reschedule(AppointmentRescheduleViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
 
-            AppointmentRepository appRepo = new AppointmentRepository();
-            Appointment app = appRepo.GetByID(model.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(model.ID);
 
-            app.Date = model.Date;
-            app.Status = StatusEnum.Pending;
-            appRepo.Save(app);
+            appointment.Date = model.Date;
+            appointment.Status = AppointmentStatus.Pending;
+            appointmentRepository.Save(appointment);
 
             return RedirectToAction("Index");
         }

@@ -14,13 +14,13 @@ namespace DataAccess.Entities
 
         public DateTime Date { get; set; }
 
-        public StatusEnum Status { get; set; }
+        public AppointmentStatus Status { get; set; }
     }
 
-    public enum StatusEnum
+    public enum AppointmentStatus
     {
         Pending,
         Approved,
-        Unapproved
+        Declined
     }
 }

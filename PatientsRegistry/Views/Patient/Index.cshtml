@@ -1,4 +1,4 @@
-﻿@model AppointmentsListVM
+﻿@model AppointmentsListViewModel
 
 @{
     ViewBag.Title = "Appointments";
@@ -33,7 +33,7 @@
 
     @foreach (Appointment item in Model.Appointments)
     {
-        if (item.Status == StatusEnum.Pending)
+        if (item.Status == AppointmentStatus.Pending)
         {
             <tr>
                 <td>
@@ -76,7 +76,7 @@
 
     @foreach (Appointment item in Model.Appointments)
     {
-        if (item.Status == StatusEnum.Approved)
+        if (item.Status == AppointmentStatus.Approved)
         {
             <tr>
                 <td>
@@ -100,7 +100,7 @@
 <hr />
 
 <div class="alert alert-danger" role="alert">
-    <strong>Unapproved</strong>
+    <strong>Declined</strong>
 </div>
 <table class="table table-hover table-borderless">
     <thead class="table-light">
@@ -120,7 +120,7 @@
 
     @foreach (Appointment item in Model.Appointments)
     {
-        if (item.Status == StatusEnum.Unapproved)
+        if (item.Status == AppointmentStatus.Declined)
         {
             <tr>
                 <td>

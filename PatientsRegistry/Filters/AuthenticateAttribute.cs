@@ -1,6 +1,6 @@
-﻿using PatientsRegistry.Models;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
+using PatientsRegistry.Models;
 
 namespace PatientsRegistry.Filters
 {
@@ -10,7 +10,7 @@ namespace PatientsRegistry.Filters
         {
             if (AuthenticationManager.LoggedUser == null)
             {
-                filterContext.Result = new RedirectResult("~/Home/Login?RedirectUrl=" + HttpUtility.UrlEncode(HttpContext.Current.Request.Url.ToString()));
+                filterContext.Result = new RedirectResult($"~/Home/Login?RedirectUrl={HttpUtility.UrlEncode(HttpContext.Current.Request.Url.ToString())}");
             }
         }
     }

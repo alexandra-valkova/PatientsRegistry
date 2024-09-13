@@ -1,63 +1,54 @@
-﻿using DataAccess.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using DataAccess.Entities;
 
 namespace DataAccess.Repositories
 {
-    public abstract class BaseRepository<T> where T : BaseEntity
+    public abstract class BaseRepository<TEntity> where TEntity : BaseEntity
     {
-        private PatientsRegistryDB Context { get; set; }
-        public DbSet<T> DbSet { get; set; }
+        private PatientsRegistryDbContext Context { get; set; }
+
+        public DbSet<TEntity> DbSet { get; set; }
 
         public BaseRepository()
         {
-            Context = new PatientsRegistryDB();
-            DbSet = Context.Set<T>();
+            Context = new PatientsRegistryDbContext();
+            DbSet = Context.Set<TEntity>();
         }
 
-        // GetAll
-        public List<T> GetAll(Expression<Func<T, bool>> filter = null)
+        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            IQueryable<T> result = DbSet;
+            IQueryable<TEntity> query = DbSet;
 
             if (filter != null)
             {
-                return result.Where(filter).ToList();
+                query = query.Where(filter);
             }
 
-            else
-            {
-                return result.ToList();
-            }
+            return query.ToList();
         }
 
-        // Get First
-        public T GetFirst(Expression<Func<T, bool>> filter = null)
+        public TEntity GetFirst(Expression<Func<TEntity, bool>> filter = null)
         {
-            DbSet<T> result = DbSet;
+            IQueryable<TEntity> query = DbSet;
 
             if (filter != null)
             {
-                return result.Where(filter).FirstOrDefault();
+                query = query.Where(filter);
             }
 
-            else
-            {
-                return null;
-            }
+            return query.FirstOrDefault();
         }
 
-        // GetByID
-        public T GetByID(int id)
+        public TEntity GetByID(int id)
         {
             return DbSet.Find(id);
         }
 
-        // Save
-        public void Save(T entity)
+        public void Save(TEntity entity)
         {
             if (entity.ID > 0)
             {
@@ -69,24 +60,22 @@ namespace DataAccess.Repositories
                 Insert(entity);
             }
         }
-        // Add
-        private void Insert(T entity)
+
+        public void Delete(TEntity entity)
+        {
+            DbSet.Remove(entity);
+            Context.SaveChanges();
+        }
+
+        private void Insert(TEntity entity)
         {
             DbSet.Add(entity);
             Context.SaveChanges();
         }
 
-        // Edit
-        private void Update(T entity)
+        private void Update(TEntity entity)
         {
             Context.Entry(entity).State = EntityState.Modified;
-            Context.SaveChanges();
-        }
-
-        // Delete
-        public void Delete(T entity)
-        {
-            DbSet.Remove(entity);
             Context.SaveChanges();
         }
     }

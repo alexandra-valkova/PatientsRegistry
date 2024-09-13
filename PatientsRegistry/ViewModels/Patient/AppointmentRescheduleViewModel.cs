@@ -1,10 +1,10 @@
-﻿using PatientsRegistry.Attributes;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
+using PatientsRegistry.Attributes;
 
 namespace PatientsRegistry.ViewModels.Patient
 {
-    public class AppointmentReschedule : BaseVM
+    public class AppointmentRescheduleViewModel : BaseViewModel
     {
         [Required]
         [MinDateToday]

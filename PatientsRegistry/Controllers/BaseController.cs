@@ -1,25 +1,26 @@
-﻿using DataAccess.Entities;
+﻿using System.Web.Mvc;
+using DataAccess.Entities;
 using DataAccess.Repositories;
 using PatientsRegistry.ViewModels;
-using System.Web.Mvc;
 
 namespace PatientsRegistry.Controllers
 {
-    public abstract class BaseController<T, L, D> : Controller
-        where T : BaseEntity, new()
-        where L : AppointmentsListVM, new()
-        where D : AppointmentDetailsVM, new()
+    public abstract class BaseController<TEntity, TList, TDetails> : Controller
+        where TEntity : BaseEntity, new()
+        where TList : AppointmentsListViewModel, new()
+        where TDetails : AppointmentDetailsViewModel, new()
     {
-        public abstract BaseRepository<T> GetRepo();
+        public abstract BaseRepository<TEntity> GetRepository();
 
-        public abstract L PopulateListVM(L model);
+        public abstract TList PopulateListViewModel(TList model);
 
-        public abstract D PopulateDetailsVM(D model);
+        public abstract TDetails PopulateDetailsViewModel(TDetails model);
 
         public ActionResult Index()
         {
-            L model = new L();
-            PopulateListVM(model);
+            TList model = new TList();
+            PopulateListViewModel(model);
+
             return View(model);
         }
 
@@ -30,11 +31,11 @@ namespace PatientsRegistry.Controllers
                 return RedirectToAction("Index");
             }
 
-            D model = new D()
+            TDetails model = new TDetails()
             {
                 ID = id.Value
             };
-            PopulateDetailsVM(model);
+            PopulateDetailsViewModel(model);
 
             return View(model);
         }
@@ -46,15 +47,15 @@ namespace PatientsRegistry.Controllers
                 return RedirectToAction("Index");
             }
 
-            BaseRepository<T> entityRepo = GetRepo();
-            T entity = entityRepo.GetByID(id.Value);
+            BaseRepository<TEntity> entityRepository = GetRepository();
+            TEntity entity = entityRepository.GetByID(id.Value);
 
             if (entity == null)
             {
                 return HttpNotFound();
             }
 
-            entityRepo.Delete(entity);
+            entityRepository.Delete(entity);
 
             return RedirectToAction("Index");
         }

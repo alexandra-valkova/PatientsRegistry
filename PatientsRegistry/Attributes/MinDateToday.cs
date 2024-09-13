@@ -7,8 +7,7 @@ namespace PatientsRegistry.Attributes
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            DateTime dt = (DateTime)value;
-            if (dt >= DateTime.Now)
+            if (Convert.ToDateTime(value) > DateTime.Now)
             {
                 return ValidationResult.Success;
             }

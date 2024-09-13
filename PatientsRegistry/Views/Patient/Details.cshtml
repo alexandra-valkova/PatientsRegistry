@@ -1,4 +1,4 @@
-﻿@model AppointmentDetailsPatient
+﻿@model AppointmentDetailsPatientViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -38,7 +38,7 @@
 </div>
 
 <p>
-    @if (Model.Status == StatusEnum.Unapproved)
+    @if (Model.Status == AppointmentStatus.Declined)
     {
         @Html.ActionLink("Reschedule", "Reschedule", new { id = Model.ID }, new { @class = "btn btn-warning" })
     }

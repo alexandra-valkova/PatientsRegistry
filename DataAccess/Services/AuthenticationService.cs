@@ -5,13 +5,18 @@ namespace DataAccess.Services
 {
     public class AuthenticationService
     {
+        private readonly UserRepository userRepository;
+
         public User LoggedUser { get; set; }
+
+        public AuthenticationService()
+        {
+            userRepository = new UserRepository();
+        }
 
         public void AuthenticateUser(string username, string password)
         {
-            UserRepository userRepo = new UserRepository();
-
-            LoggedUser = userRepo.GetFirst(u => u.Username == username && u.Password == password);
+            LoggedUser = userRepository.GetFirst(user => user.Username == username && user.Password == password);
         }
     }
 }

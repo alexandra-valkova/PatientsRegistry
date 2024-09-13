@@ -2,7 +2,7 @@
 
 namespace PatientsRegistry.ViewModels.Home
 {
-    public class LoginVM
+    public class LoginViewModel
     {
         [Required]
         public string Username { get; set; }

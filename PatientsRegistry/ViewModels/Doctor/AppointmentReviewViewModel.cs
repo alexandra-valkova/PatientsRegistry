@@ -1,13 +1,13 @@
-﻿using DataAccess.Entities;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
+using DataAccess.Entities;
 
 namespace PatientsRegistry.ViewModels.Doctor
 {
-    public class AppointmentReview : BaseVM
+    public class AppointmentReviewViewModel : BaseViewModel
     {
         [Required]
-        public StatusEnum Status { get; set; }
+        public AppointmentStatus Status { get; set; }
 
         [DataType(DataType.DateTime)]
         public DateTime Date { get; set; }

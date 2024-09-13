@@ -1,6 +1,6 @@
 ﻿namespace PatientsRegistry.ViewModels
 {
-    public class BaseVM
+    public class BaseViewModel
     {
         public int ID { get; set; }
     }

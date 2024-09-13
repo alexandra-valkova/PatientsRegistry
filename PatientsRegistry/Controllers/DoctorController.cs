@@ -1,78 +1,74 @@
-﻿using DataAccess.Entities;
+﻿using System.Web.Mvc;
+using DataAccess.Entities;
 using DataAccess.Repositories;
 using PatientsRegistry.Filters;
 using PatientsRegistry.Models;
 using PatientsRegistry.ViewModels;
 using PatientsRegistry.ViewModels.Doctor;
-using System.Web.Mvc;
 
 namespace PatientsRegistry.Controllers
 {
     [Doctor]
     [Authenticate]
-    public class DoctorController : BaseController<Appointment, AppointmentsListVM, AppointmentDetailsDoctor>
+    public class DoctorController : BaseController<Appointment, AppointmentsListViewModel, AppointmentDetailsDoctorViewModel>
     {
-        public override BaseRepository<Appointment> GetRepo()
+        public override BaseRepository<Appointment> GetRepository()
         {
             return new AppointmentRepository();
         }
 
-        // Index
-        public override AppointmentsListVM PopulateListVM(AppointmentsListVM model)
+        public override AppointmentsListViewModel PopulateListViewModel(AppointmentsListViewModel model)
         {
             TryUpdateModel(model);
 
-            BaseRepository<Appointment> appRepo = GetRepo();
-            model.Appointments = appRepo.GetAll(a => a.DoctorID == AuthenticationManager.LoggedUser.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            model.Appointments = appointmentRepository.GetAll(appointment => appointment.DoctorID == AuthenticationManager.LoggedUser.ID);
 
             return model;
         }
 
-        // Details
-        public override AppointmentDetailsDoctor PopulateDetailsVM(AppointmentDetailsDoctor model)
+        public override AppointmentDetailsDoctorViewModel PopulateDetailsViewModel(AppointmentDetailsDoctorViewModel model)
         {
-            BaseRepository<Appointment> appRepo = GetRepo();
-            Appointment app = appRepo.GetByID(model.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(model.ID);
 
-            model.Date = app.Date;
-            model.Status = app.Status;
-            model.Patient = app.Patient.FullName;
+            model.Date = appointment.Date;
+            model.Status = appointment.Status;
+            model.Patient = appointment.Patient.FullName;
 
             return model;
         }
 
-        // Review GET
         [HttpGet]
         public ActionResult Review(int? id)
         {
-            AppointmentRepository appRepo = new AppointmentRepository();
-            Appointment app = appRepo.GetByID(id.Value);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(id.Value);
 
-            AppointmentReview model = new AppointmentReview()
+            AppointmentReviewViewModel model = new AppointmentReviewViewModel()
             {
-                ID = app.ID,
-                PatientID = app.PatientID,
-                DoctorID = app.DoctorID,
-                Patient = app.Patient,
-                Date = app.Date,
-                Status = app.Status
+                ID = appointment.ID,
+                PatientID = appointment.PatientID,
+                DoctorID = appointment.DoctorID,
+                Patient = appointment.Patient,
+                Date = appointment.Date,
+                Status = appointment.Status
             };
 
             return View(model);
         }
 
-        // Review POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Review(AppointmentReview model)
+        public ActionResult Review(AppointmentReviewViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            AppointmentRepository appRepo = new AppointmentRepository();
-            Appointment app = appRepo.GetByID(model.ID);
+            BaseRepository<Appointment> appointmentRepository = GetRepository();
+            Appointment appointment = appointmentRepository.GetByID(model.ID);
 
             if (Request.Form["Approve"] != null)
             {
@@ -83,24 +79,22 @@ namespace PatientsRegistry.Controllers
                 model = Decline(model);
             }
 
-            app.Status = model.Status;
+            appointment.Status = model.Status;
 
-            appRepo.Save(app);
+            appointmentRepository.Save(appointment);
 
             return RedirectToAction("Index");
         }
 
-        // Approve
-        private AppointmentReview Approve(AppointmentReview model)
+        private AppointmentReviewViewModel Approve(AppointmentReviewViewModel model)
         {
-            model.Status = StatusEnum.Approved;
+            model.Status = AppointmentStatus.Approved;
             return model;
         }
 
-        // Decline
-        private AppointmentReview Decline(AppointmentReview model)
+        private AppointmentReviewViewModel Decline(AppointmentReviewViewModel model)
         {
-            model.Status = StatusEnum.Unapproved;
+            model.Status = AppointmentStatus.Declined;
             return model;
         }
     }

@@ -1,5 +1,5 @@
-﻿using PatientsRegistry.Models;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using PatientsRegistry.Models;
 
 namespace PatientsRegistry.Filters
 {

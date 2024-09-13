@@ -15,6 +15,6 @@ namespace DataAccess.Entities
         public bool IsDoctor { get; set; }
 
         [Display(Name = "Name")]
-        public virtual string FullName => FirstName + " " + LastName;
+        public virtual string FullName => $"{FirstName} {LastName}";
     }
 }

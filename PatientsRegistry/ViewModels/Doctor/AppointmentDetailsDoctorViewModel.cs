@@ -1,6 +1,6 @@
 ﻿namespace PatientsRegistry.ViewModels.Doctor
 {
-    public class AppointmentDetailsDoctor : AppointmentDetailsVM
+    public class AppointmentDetailsDoctorViewModel : AppointmentDetailsViewModel
     {
         public string Patient { get; set; }
     }
